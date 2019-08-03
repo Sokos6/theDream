@@ -28,6 +28,9 @@ function findNemo(array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === 'nemo') {
       console.log('Found NEMO!');
+      break; // improves code, by not looping all the times even after finding nemo
+      // BIG O CARES ABOUT WORST CASE THOUGH....WHAT IF NEMO WAS STILL LAST IN THE ARRAY? O(n)
+      // IT COULD BE O(1) IF NEMO WAS FIRST IN THE ARRAY. WE CAN'T BE CERTAIN OF THE INPUT THOUGH.
     }
   }
   const t1 = performance.now();
@@ -67,3 +70,33 @@ function anotherFunChallenge(input) {
 }
 // Big O(4 + 5n)
 // Just O(n)
+
+function printFirstItemThenFirstHalfThenSayHi100Tiems(items) {
+  console.log(items[0]);
+
+  let middleIndex = Math.flooer(items.length / 2);
+  let index = 0;
+
+  while (index < middleIndex) {
+    console.log(items[index]);
+    index++;
+  }
+
+  for (let i = 0; i < 100; i++) {
+    console.log('hi');
+  }
+}
+// O(1 + n/2 + 100)
+// Simply becomes O(n)
+
+// Different Temrs for Inputs
+function compressBoxesTwice(boxes, boxes2) {
+  boxes.forEach(function(boxes) {
+    console.log(boxes);
+  });
+
+  boxes2.forEach(function(boxes) {
+    console.log(boxes);
+  });
+}
+// O(a + b)
