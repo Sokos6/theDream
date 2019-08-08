@@ -1,4 +1,6 @@
-
+// Run Time
+// Lookup: O(1)
+// Insertion O(1)
 
 // HASH TABLE
 
@@ -138,3 +140,13 @@ class HashTable {
     };
   }
 }
+const hash = new HashTable();
+console.log(hash);
+hash.set('Will', 39);
+console.log(hash.get('Will'));
+console.log(hash.count());
+hash.set('Rebecca', 29);
+hash.set('Gabe', 15);
+hash.set('Jen', 22);
+hash.set('Facebook', 1);
+hash.forEach(tuple => console.log(tuple[0]));
