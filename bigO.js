@@ -171,3 +171,26 @@ printAllNumbersThenAllPairSums([1,2,3,4,5]);
 // READABLE
 // MEMORY - Space Complexity
 // SPEED - Time Complexity
+
+
+// Ok Let's Go!
+//
+int sum(int n) {
+  if (n <= 0) {
+    return 0;
+  }
+  return n + sum(n-1);
+}
+// each call adds a level to the stack
+//sum(4)
+  // sum(3)
+  //   sum(2)
+  //     sum(1)
+  //       sum(0)
+  // O(n) time and O(n) space
+
+void foo(int[] array) {
+  int sum = 0;
+  int product = 1;
+  for(int i = 0;)
+}
